@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2b1055, #7597de);
+    
+}
+header {
+    background-color: transparent;
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255 .5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    border-right: 1px solid #e1e8ed;
+    list-style: none;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+.hidden {
+    display: none;
+}
+
+.textarea {
+    margin-top: 20px;
+}
+
+.enviar {
+    width: 130px;
+    height: 30px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.enviar:hover {
+    background: #fff;
+    color: #2b1055;
+} 
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+
+}
+.navegacion a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navegacion a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navegacion a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1)
+}
+
+.navegacion .btnCrear-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navegacion .btnCrear-popup:hover {
+    background: #fff;
+    color: #2b1055;
+} 
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#1c0522, transparent);
+    z-index: 1000;
+}
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section img#luna {
+    mix-blend-mode: screen;
+}
+
+section img#adelante {
+    z-index: 10;
+}
+
+#text {
+    position: absolute;
+    right: -350px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;
+    z-index: 9;
+
+}
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+
+#link {
+    color: #fff;
+    user-select: none;
+}
+
+.conten {
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+
+}
+
+.conten .barra1 {
+    border-bottom: 1px solid #ccd9bf;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conten .barra2 {
+    border-bottom: 1px solid #ccd9bf;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.conten h2 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+
+}
+
+.conten h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #fff;
+
+}
+
+.conten h4 {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.conten h5 {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+    color: #fff;
+
+}
+
+.conten p1 {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.conten p2 {
+    font-size: 0.8em;
+    color: #fff;
+}

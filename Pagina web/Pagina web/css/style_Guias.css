@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    vertical-align: baseline;
+}
+
+body {
+    background: rgb(9, 21, 29);
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.head {
+    background-color: transparent;
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255 .5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    border-right: 1px solid #e1e8ed;
+    list-style: none;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navegacion a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navegacion a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navegacion a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1)
+}
+
+.navegacion .btnDonaciones-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navegacion .btnDonaciones-popup:hover {
+    background: #68c927;
+    color: #fff;
+} 
+
+.header .guias {
+    display: flex;
+    justify-content: center;
+    align-items: ce;
+}
+
+.guias {
+    height: 100vh !important;
+    background:  url(../imagenes/header.jpg) no-repeat center;
+    background-size: cover;
+    color: #17171749;
+
+}
+
+.guias::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Cambia el color y la opacidad según tus necesidades */
+    z-index: 1; /* Asegura que el fondo esté por encima de la imagen */
+    pointer-events: none; /* Evita que el fondo afecte la interacción del usuario */
+  }
+
+  .guias > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.guias h1 {
+    font-size: 1.7em;
+    margin-bottom: 10px;
+    color: #fff;
+    z-index: 3;
+}
+
+.guias h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff;
+
+}
+
+.guias h3 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.guias p {
+    font-size: 1.2em;
+    color: #fff;
+    z-index: 3;
+}
+
+.paso1 {
+    padding: 35px;
+    background: rgb(9 21 29);
+    color: #fff;
+}
+
+.paso1 h2 {
+    font-size: 32px !important;
+    padding-bottom: 15px;
+}
+
+.paso1 p {
+    margin-bottom: 10px;
+}
+
+
+
+.paso2 {
+    padding: 35px;
+    background: rgb(9 21 29);
+    color: #fff;
+}
+
+.paso2  h2 {
+    font-size: 32px !important;
+    padding-bottom: 15px;
+}
+
+.paso2 p {
+    margin-bottom: 10px;
+}
+
+.paso3 {
+    padding: 35px;
+    background: rgb(9 21 29);
+    color: #fff;
+}
+
+.paso3  h2 {
+    font-size: 32px !important;
+    padding-bottom: 15px;
+}
+
+.paso3  h3 {
+    font-size: 20px !important;
+    padding-bottom: 15px;
+}
+
+.paso3 p {
+    margin-bottom: 10px;
+}
+
+.consejos {
+    background: rgb(9 21 29);
+    padding: 35px;
+    color: #fff;
+}
+
+.consejos  h2 {
+    font-size: 32px !important;
+    padding-bottom: 15px;
+    color: #fff;
+}
+
+.consejos p {
+    margin-bottom: 10px;
+}
+
+.videos {
+    background: rgb(9 21 29);
+    padding: 35px;
+    color: #fff;
+}
+
+.videos  h2 {
+    text-align: center;
+    font-size: 32px !important;
+    font-weight: 900;
+    padding-bottom: 15px;
+}
+
+.videos  iframe {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.btn {
+    padding: 5px;
+    color: white;
+    background-color: #664216;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn-primary {
+    padding: 5px;
+    color: white;
+    background-color: rgb(9 21 29);
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.grid-2 {
+    @media only screen and (min-width : 901px) {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}

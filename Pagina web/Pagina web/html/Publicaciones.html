@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoopFamilia</title>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- Font Awesome CDN para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts para fuentes personalizadas -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_Publicaciones.css">
+</head>
+
+<body>
+    <header>
+        <h1>CoopFamilia</h1>
+        <p>Únete a la red de agentes de cambio que está redefiniendo el futuro del medio ambiente. 
+            Participa en proyectos innovadores, colabora en iniciativas sustentables y conecta con personas que, 
+            como tú, desean dejar una huella verde en el mundo.</p>
+        
+        <div class="profile">
+            <i class="fas fa-user-circle fa-2x" onclick="toggleDropdown()"></i>
+            <div id="profileDropdown" class="dropdown-content">
+                <a href="Formulario_Iniciar.html">Iniciar sesión</a>
+                <a href="Formulario_Registro.html">Registrarse</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Navegación</h2>
+            <ul>
+                <li><a href="Publicaciones.html"><i class="fas fa-home nav-icon"></i>Inicio</a></li>
+                <li><a href="Proyectos.html"><i class="fas fa-tree nav-icon"></i>Proyectos</a></li>
+                <li><a href="Donaciones.html"><i class="fas fa-hand-holding-usd nav-icon"></i>Donaciones</a></li>
+                <li><a href="Guias.html"><i class="fas fa-book nav-icon"></i>Guías</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h2>Publicaciones Recientes</h2>
+
+            <!-- Publicación 1 -->
+            <div class="tweet">
+                <img src="../imagenes/Diego.png" alt="Foto de Usuario A" class="profile-pic">
+                <div class="tweet-content">
+                    <strong>Juan Diego</strong><br>
+                    ¡Acabo de unirme a la plataforma Eco+ y estoy emocionado de colaborar!
+                    <div class="tweet-button">
+                        <button class="reply-button" onclick="openReplyBox(this)">Responder</button>
+                    </div>
+                </div>
+                
+                <!-- Ventana de respuesta oculta para Publicación 1 -->
+                <div class="reply-box" style="display: none;">
+                    <textarea placeholder="Escribe tu respuesta aquí..."></textarea>
+                    <button class="send-reply-button" onclick="closeReplyBox(this)">Enviar</button>
+                </div>
+            </div>
+
+            <!-- Publicación 2 -->
+            <div class="tweet">
+                <div class="tweet-content">
+                    <strong>Simon Es</strong><br>
+                    Participé en una reforestación este fin de semana. ¡Fue una experiencia increíble!
+                    <img src="../imagenes/Reforestacion.png" alt="Imagen de la reforestación">
+                </div>
+                <div class="tweet-button">
+                    <button class="reply-button" onclick="openReplyBox(this)">Responder</button>
+                </div>
+                <!-- Ventana de respuesta oculta para Publicación 2 -->
+                <div class="reply-box" style="display: none;">
+                    <textarea placeholder="Escribe tu respuesta aquí..."></textarea>
+                    <button class="send-reply-button" onclick="closeReplyBox(this)">Enviar</button>
+                </div>
+            </div>
+
+            <!-- Publicación 3 -->
+            <div class="tweet">
+                <div class="tweet-content">
+                    <strong>Jhon Edi</strong><br>
+                    Aquí está mi pequeño jardín urbano. ¡Cada esfuerzo cuenta para un mundo más verde!
+                    <img src="../imagenes/Jardin.png" alt="Imagen del jardín urbano">
+                </div>
+                <div class="tweet-button">
+                    <button class="reply-button" onclick="openReplyBox(this)">Responder</button>
+                </div>
+                <!-- Ventana de respuesta oculta para Publicación 3 -->
+                <div class="reply-box" style="display: none;">
+                    <textarea placeholder="Escribe tu respuesta aquí..."></textarea>
+                    <button class="send-reply-button" onclick="closeReplyBox(this)">Enviar</button>
+                </div>
+            </div>
+
+            <!-- Publicación 4 -->
+            <div class="tweet">
+                <img src="../imagenes/Aleja.png" alt="Foto de Usuario B" class="profile-pic">
+                <div class="tweet-content">
+                    <strong>Alejandra Es</strong><br>
+                    Ayer participé en una limpieza de parque local. Necesitamos más gente, ¡únanse!
+                </div>
+                <div class="tweet-button">
+                    <button class="reply-button" onclick="openReplyBox(this)">Responder</button>
+                </div>
+                <!-- Ventana de respuesta oculta para Publicación 4 -->
+                <div class="reply-box" style="display: none;">
+                    <textarea placeholder="Escribe tu respuesta aquí..."></textarea>
+                    <button class="send-reply-button" onclick="closeReplyBox(this)">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("profileDropdown");
+            dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+        }
+    
+        function openReplyBox(button) {
+            var replyBox = button.parentElement.nextElementSibling;
+            replyBox.style.display = replyBox.style.display === 'none' ? 'block' : 'none';
+        }
+    
+        function closeReplyBox(button) {
+            var replyBox = button.parentElement;
+            replyBox.style.display = 'none'; // Oculta la ventana de respuesta
+        }
+    </script>
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("profileDropdown");
+            dropdown.style.display = dropdown.style.display === "none" ? "block" : "none";
+        }
+    
+        function openReplyBox(button) {
+            var replyBox = button.parentElement.nextElementSibling;
+            replyBox.style.display = 'block'; // Muestra la ventana de respuesta
+            button.style.display = 'none'; // Oculta el botón "Responder"
+        }
+    
+        function closeReplyBox(button) {
+            var replyBox = button.parentElement;
+            replyBox.style.display = 'none'; // Oculta la ventana de respuesta
+            var tweetButton = button.parentElement.parentElement.getElementsByClassName("reply-button")[0];
+            tweetButton.style.display = 'block'; // Muestra el botón "Responder" asociado
+        }
+    </script>
+    <script src="../js/script_Publicaciones.js"></script>
+</body>
+</html>

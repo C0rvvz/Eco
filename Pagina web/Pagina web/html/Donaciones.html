@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="vista" content="width=device-width, initial-scale=1.0">
+    <title>Donaciones</title>
+    <link rel="stylesheet" href="../css/style_Donaciones.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+<body>
+    <header>
+        <h2 class="logo">CoopFamilia</h2>
+        <nav class="navegacion">
+            <a href="Donaciones.html">Inicio</a>
+            <a href="Publicaciones.html">Publicaciones</a>
+            <a href="Proyectos.html">Proyectos</a>
+            <a href="Guias.html">Guias</a>
+            <button onclick="showDonationForm()" class="btnDonaciones-popup">Donar</button>
+        </nav>
+    </header>
+
+    <div class="wrapper" id="form-donations">
+        
+        <span id="close" class="icon-close disabled" onclick="closeDonationForm()">
+            <ion-icon name="close"></ion-icon>
+        </span>
+
+        <div class="tituloGrafica" id="title">
+            <h2>Donaciones</h2>
+        </div>
+        
+        <div id="chart-container" class="chart">
+            <div id="chart"></div>
+        </div>
+
+        <div id="form" class="disabled" >
+            <div class="form-box donaciones">
+                <h2>Metodo de pago</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="body"></ion-icon>
+                        </span>
+                        <input type="nombre" required>
+                        <label>Nombre</label>  
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail"></ion-icon>
+                        </span>
+                        <input type="correo" required>
+                        <label>Correo</label>  
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="call"></ion-icon>
+                        </span>
+                        <input type="telefono" required>
+                        <label>Telefono</label>  
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="business"></ion-icon>
+                        </span>
+                        <input type="ciudad" required>
+                        <label>Ciudad</label>  
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="airplane"></ion-icon>
+                        </span>
+                        <input type="pais" required>
+                        <label>Pais</label>  
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="card"></ion-icon>
+                        </span>
+                        <input type="tarjeta de credito o debito" required>
+                        <label>Tarjeta credito o debito</label>  
+                    <button type="submit" class="btn">Realizar pago</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="style_Donaciones.css">
+    <script src="../js/script_Donaciones.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

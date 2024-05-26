@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Proyectos</title>
+        <link rel="stylesheet" href="../css/style_Proyectos.css">
+    </head>
+
+    <body>
+        <header> 
+            <h2 class="logo">CoopFamilia</h2>
+            <nav class="navegacion">
+            <a href="Proyectos.html">Inicio</a>
+            <a href="Publicaciones.html">Publicaciones</a>
+            <a href="Guias.html">Guias</a>
+            <a href="Donaciones.html">Donaciones</a>
+            <button onclick="crearProyectos()" class="btnCrear-popup">Crear proyecto</button>
+        </nav>
+        </header>
+        <section>
+            <img src="../imagenes/stars.png" id="estrellas">
+            <img src="../imagenes/moon.png" id="luna">
+            <img src="../imagenes/mountains_behind.png" id="detras">
+            <h2 id="text"> Proyectos</h2>
+            <a href="#conten" id="btn"> Explore</a>
+            <img src="../imagenes/mountains_front.png" id="adelante">
+
+        </section>
+        <div class="conten" id="conten">
+            <div class="barra1">
+                <h5>Numero de proyectos completados: <p2>2</p2></h5>
+                <h3>¿De que se trata?</h3>
+                <p1>
+                    Los proyectos se basan en una estrategia  de cuidado para el ambiente. 
+                    Lograremos con esto organizar eventos de limpieza, asignar tareas y cargar informes de progreso, 
+                    con esto lograremos llegar a distintos tipos de usuarios que deseen sumarse al ciudado de su entorno.<br><br>
+                    Estos proyectos buscan centrarse en implementar una estrategia integral de cuidado ambiental. Planeamos no solo organizar eventos de limpieza, sino también asignar tareas específicas a participantes. Nuestra meta es involucrar a diversos usuarios interesados en contribuir al bienestar de su entorno, promoviendo así una comunidad comprometida con el cuidado ambiental.<br><br>
+                </p1>
+            </div>
+            
+            <div class="barra2">
+                <h3> Limpieza del parque local </h3>
+                <p1> 
+                    Este proyecto se creo para tratar de mejorar el parque local, ya que se encuentra en mal estado y necesitamos 
+                    generar consinencia del buen cuidado de est, por lo tanto los que esten interezados podran encontrarnos en el parque a la hora...<br><br>
+                    
+                    <h4>Tareas:<br></h4>
+                    <p2>
+                        - Reciclar<br>
+                        - Consientizar<br>
+                        - ...<br><br>
+                    </p2>
+                    <h4>Informes de progreso:<br></h4>
+                    <p2>
+                        <a href="https://docs.google.com/document/d/1RXXMFt8_5x0ZzlOeRN_o2y-G1I_SVjBZYWUC7SHskr0/edit?usp=sharing" id="link"  target="_blank"> Link</a>
+                    </p2>
+                </p1>
+            </div>
+            
+            <div class="hidden" id="crear">
+                <div>
+                    <textarea class="textarea" placeholder="Ingrese los datos del proyecto"  cols="50" rows="1"></textarea>
+                </div>
+                <div>
+                    <button class="enviar btnCrear-popup">Enviar</button>
+                </div>
+            </div>
+
+        </div>
+        <script src="../js/script_Proyectos.js"></script>
+    </body>
+</html>

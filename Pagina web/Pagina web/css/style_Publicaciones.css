@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    background-color: #fff; 
+    background-image: url('../imagenes/fondo.jpg');
+    width: 100%;
+    background-size: 2900px, 2889px; /* Define el tamaño específico de la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center center; /* Centra la imagen tanto horizontal como verticalmente */
+}
+
+header {
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+    user-select: none;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+}
+
+
+
+header p {
+    font-size: 1.5em; 
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    font-weight: 300; 
+}
+
+header .profile {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.sidebar {
+    position: sticky;
+    width: 25%;
+    max-height: 200px; /* Altura máxima que puede tener */
+    overflow-y: auto; /* Muestra una barra de desplazamiento vertical si el contenido es demasiado largo */
+    background-color: transparent; /* Este es un tono de verde claro */
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255 .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    border-right: 1px solid #e1e8ed;
+    list-style: none;
+    top: 0;
+}
+
+/* Oculta la barra de desplazamiento en navegadores webkit */
+.sidebar::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Opcional: Estilos adicionales para la pista (track) de la barra de desplazamiento */
+.sidebar::-webkit-scrollbar-track {
+    background-color: transparent; /* Puedes personalizar el color de la pista si lo deseas */
+}
+
+/* Opcional: Estilos adicionales para el mango (thumb) de la barra de desplazamiento */
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Puedes personalizar el color del mango si lo deseas */
+}
+
+.sidebar ul {
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    list-style: none; /* Eliminar puntos de lista */
+}
+
+.sidebar a {
+    position: relative;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #fff; /* O cualquier color que prefieras */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega una sombra al texto */
+}
+
+.sidebar a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+
+.sidebar a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1)
+}
+
+.sidebar h2 {
+    user-select: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+}
+
+
+.nav-icon {
+    margin-right: 10px;
+    color: #fff; /* Íconos en verde para seguir la temática */
+}
+
+.content {
+    width: 75%;
+    background-color: #fff; /* Fondo blanco para el contenido */
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tweet {
+    border-bottom: 1px solid #ccd9bf; /* Un borde más suave que combine con el esquema ecológico */
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tweet:last-child {
+    border-bottom: none;
+}
+
+.tweet-content {
+    margin-bottom: 10px; /* Ajusta según sea necesario */
+}
+
+img.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.tweet-content {
+    flex-grow: 1;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 20px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.tweet-content img {
+    max-width: 30%; /* Asegura que la imagen no sea más ancha que su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Hace que la imagen sea un bloque */
+    margin-top: 10px; /* Añade un pequeño espacio encima de la imagen */
+    margin-left: auto; /* Centra la imagen horizontalmente */
+    margin-right: auto; /* Centra la imagen horizontalmente */
+}
+
+img.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.reply-button {
+    background-color: #74d7e4; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 1em; 
+    margin-top: 10px; 
+}
+
+.reply-button:hover {
+    background-color: #74d7e4; 
+}
+
+.tweet-button {
+    text-align: center; 
+}
+
+.reply-box {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    display: none; /* Inicialmente oculto */
+}
+
+.reply-box textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical; /* Permite al usuario ajustar la altura del área de texto */
+}
+
+.send-reply-button {
+    background-color: #74d7e4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
